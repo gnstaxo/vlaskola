@@ -84,6 +84,13 @@ class ExamDetail(Resource):
 
         exam = Exam.get_or_none(Exam.node_id == node_id) 
 
+        user_roles = [role.name for role in list(current_user.roles.select())]
+
+        if not bool(set(user_roles).intersection(set(exam.roles.split(','))))\
+            and not current_user.has_role("admin"):
+
+            return "You can't do this.", 403
+
         attempt = Attempt.get_or_none(
             (Attempt.user == current_user.id) & (Attempt.exam == exam))
 
@@ -220,6 +227,13 @@ class ExamAttempt(Resource):
 
         if exam.locked:
             return "Locked.", 423
+
+        user_roles = [role.name for role in list(current_user.roles.select())]
+
+        if not bool(set(user_roles).intersection(set(exam.roles.split(','))))\
+            and not current_user.has_role("admin"):
+
+            return "You can't do this.", 403
 
         last_attempt = Attempt.get_or_none((Attempt.user == current_user.id) &
             (Attempt.exam == exam))
