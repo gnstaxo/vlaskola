@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Vlaskola</title>
+  <link rel="shortcut icon" href="/static/favicon.ico">
+  <link rel="stylesheet" href="/static/lib/min.css">
+  <link rel="stylesheet" href="/static/styles.css">
+  <script src="/static/lib/axios.min.js"></script>
+  <script src="/static/lib/vue.global.js"></script>
+  <script src="/static/lib/vue-router.global.js"></script>
+  <script src="/static/lib/lockr.js"></script>
+  <script src="/static/lib/jquery-3.5.1.slim.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+  <div id="app">
+    <navigation-bar></navigation-bar>
+    <div id="main-container" class="container">
+      <router-view></router-view>
+    </div>
+    <footer>
+      <p><strong>vlaskola</strong>
+      was designed and built by
+      <a href="https://github.com/gnstaxo" target="_blank">@gnstaxo</a>.
+      Source code licensed under the
+      <a href="https://github.com/gnstaxo/vlaskola/blob/master/LICENSE">MIT License</a>.</p>
+      </footer>
+  </div>
+  <!-- Import App -->
+  <script type="module" src="/static/main.js"></script>
+</body>
+</html>

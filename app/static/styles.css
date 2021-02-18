@@ -1,0 +1,65 @@
+body {
+	background-color: #eeeeee;
+}
+
+body, html {
+	height: 100%;
+}
+
+.exam-list-item:hover {
+	cursor: pointer;
+}
+
+.question-square {
+	background-color: white;
+	text-align: center;
+	color: black;
+}
+
+.answered {
+	background-color: #90caf9;
+}
+
+input[type="file"] {
+	margin: calc(var(--universal-margin) / 2);
+}
+
+#exam-list-sidebar {
+	max-height: 100vh;
+	overflow-y: auto;
+}
+
+.Exam-title {
+	width: max-content;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.Exam-btn-start {
+	display: block !important;
+	width: max-content;
+	margin-left: auto !important;
+	margin-right: auto !important;
+}
+
+.mini-btn {
+	padding: 5px;
+	border-radius: 3px;
+	margin: 0 5px;
+	cursor: pointer;
+}
+
+#app {
+	position: relative;
+	min-height: 100%;
+}
+
+footer {
+	width: 98.8%;
+	position: absolute;
+	bottom: 0;
+}
+
+#main-container {
+	padding-bottom: 80px;
+}
