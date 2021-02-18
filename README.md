@@ -13,9 +13,11 @@ One you've set up the enviroment, initialize the database.
 
 `$ flask init-db`
 
-And create the role "admin".
+Create the role "admin" and give it to a registered user.
 
 `$ flask roles create admin`
+
+`$ flask roles add admin your@email.com`
 
 ### Exam access
 In order to make exams visible to users you'll need to create roles for them like so
